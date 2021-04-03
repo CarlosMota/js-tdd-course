@@ -1,4 +1,5 @@
-a = 3;
-const b = 2
-const b = 4
-const c = "dasdadadaakkkkkkkkkkkkkkkkkkkkkkkkffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr";
+const a = 3;
+const b = 2;
+const c = 5;
+
+console(a+b+c);
