@@ -1,7 +1,7 @@
 {
   "name": "js-tdd-course",
   "version": "1.0.0",
-  "description": "Nossa biblioteca do curso do JS com TDD na prática",
+  "description": "Nossa biblioteca de JS com TDD na prática",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,13 +12,15 @@
   },
   "keywords": [
     "js",
-    "tdd",
-    "library"
+    "tdd"
   ],
-  "author": "Carlos Alberto",
+  "author": "Carlos Silva <carlos.motta89@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CarlosMota/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/CarlosMota/js-tdd-course#readme"
+  "homepage": "https://github.com/CarlosMota/js-tdd-course#readme",
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
 }
