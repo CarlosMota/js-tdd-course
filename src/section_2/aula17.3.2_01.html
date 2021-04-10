@@ -1,0 +1,50 @@
+<!-- 
+    Arrow Function e o lexical This 
+    Quando o Arrow function é utilizado, o valor this é estabelecido segundo o escopo de execução no qual está inserido.
+    Neste caso o escopo da função é o Windows e não o button, porque o this está pegando o escopo global.
+    A função anônima ao contrário mostra o objeto button, porque ela pega refência do membro mais imediato.
+
+    Fonte: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - This no Arrow function</title>
+</head>
+<body>
+    <button id="btnAnonymousFunction">Anonymous Function</button>
+    <button id="btnArrowFunction">Arrow Function</button>
+</body>
+<script>
+
+
+    const btnAnonymousFunction = document.getElementById('btnAnonymousFunction');
+    btnAnonymousFunction.addEventListener('click', function() {
+        console.log(this);
+        alert(this);
+    });
+
+    const btnArrowFunction = document.getElementById('btnArrowFunction');
+    btnArrowFunction.addEventListener('click',() =>{
+        alert(this)
+        console.log(this)
+    });
+    
+    /*
+    * Nas arrow functions (funções seta), o this é definido lexicalmente, isto é,
+    * seu valor é definido pelo contexto de execução onde está inserido. 
+    * Em um código global, this assume o objeto global:
+    */
+    var globalObject = this;
+    var foo = (() => this);
+    console.log(foo() === globalObject); // true
+
+
+
+
+</script>
+</html>
